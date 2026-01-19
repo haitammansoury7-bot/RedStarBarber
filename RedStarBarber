@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>RedStarBarber.com - The Mansoury Lounge</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
+
+    body {
+      font-family: 'Montserrat', sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #0b0b0b;
+      color: #f0e6d2;
+      scroll-behavior: smooth;
+    }
+
+    header {
+      background: #111;
+      color: #f0c330;
+      padding: 30px 0;
+      text-align: center;
+      position: relative;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.4);
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 2.8em;
+      letter-spacing: 2px;
+    }
+
+    header p {
+      margin-top: 5px;
+      font-size: 1.2em;
+      color: #f0e6d2;
+    }
+
+    nav {
+      background: #222;
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+
+    nav a {
+      color: #f0e6d2;
+      text-decoration: none;
+      padding: 15px 25px;
+      display: block;
+      font-weight: bold;
+      transition: 0.3s;
+    }
+
+    nav a:hover {
+      color: #111;
+      background-color: #f0c330;
+    }
+
+    section {
+      padding: 60px 20px;
+      max-width: 1000px;
+      margin: auto;
+    }
+
+    h2 {
+      text-align: center;
+      margin-bottom: 40px;
+      font-size: 2.2em;
+      color: #f0c330;
+    }
+
+    .services, .pricing {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 20px;
+    }
+
+    .service, .price {
+      background: #1a1a1a;
+      padding: 25px;
+      border-radius: 12px;
+      flex: 1 1 250px;
+      box-shadow: 0 0 20px rgba(240,198,48,0.5);
+      text-align: center;
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+
+    .service:hover, .price:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 0 25px rgba(240,198,48,0.8);
+    }
+
+    .service h3, .price h3 {
+      margin-top: 0;
+      color: #f0c330;
+      font-size: 1.5em;
+    }
+
+    .service p, .price p {
+      margin-top: 10px;
+      color: #f0e6d2;
+      font-size: 1em;
+    }
+
+    .contact-form {
+      max-width: 500px;
+      margin: auto;
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      background: #1a1a1a;
+      padding: 25px;
+      border-radius: 12px;
+      box-shadow: 0 0 20px rgba(240,198,48,0.5);
+    }
+
+    .contact-form input, .contact-form textarea, .contact-form select {
+      padding: 12px;
+      font-size: 1em;
+      border-radius: 6px;
+      border: 1px solid #333;
+      background: #0b0b0b;
+      color: #f0e6d2;
+    }
+
+    .contact-form button {
+      padding: 15px;
+      background-color: #f0c330;
+      color: #111;
+      border: none;
+      cursor: pointer;
+      border-radius: 6px;
+      font-weight: bold;
+      transition: 0.3s;
+    }
+
+    .contact-form button:hover {
+      background-color: #f0e6d2;
+      color: #111;
+    }
+
+    footer {
+      background: #111;
+      color: #f0e6d2;
+      text-align: center;
+      padding: 25px 0;
+      margin-top: 40px;
+    }
+
+    /* WhatsApp floating button */
+    .whatsapp-btn {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      background-color: #25D366;
+      color: #fff;
+      border-radius: 50%;
+      width: 60px;
+      height: 60px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 30px;
+      box-shadow: 0 0 15px rgba(0,0,0,0.4);
+      z-index: 1000;
+      transition: transform 0.3s;
+    }
+
+    .whatsapp-btn:hover {
+      transform: scale(1.1);
+    }
+
+    @media (max-width: 600px) {
+      .services, .pricing {
+        flex-direction: column;
+      }
+    }
+
+    .hero-image {
+      background-image: url('https://images.unsplash.com/photo-1590487989892-08ad4e5275cb?auto=format&fit=crop&w=1200&q=80');
+      background-size: cover;
+      background-position: center;
+      height: 300px;
+      border-radius: 12px;
+      margin-bottom: 40px;
+      box-shadow: 0 0 20px rgba(0,0,0,0.5);
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>The Mansoury Lounge</h1>
+    <p>RedStarBarber.com</p>
+  </header>
+
+  <nav>
+    <a href="#accueil">Accueil</a>
+    <a href="#services">Services</a>
+    <a href="#tarifs">Tarifs</a>
+    <a href="#rdv">Réservation</a>
+    <a href="#contact">Contact</a>
+  </nav>
+
+  <section id="accueil">
+    <div class="hero-image"></div>
+    <h2>Bienvenue au Mansoury Lounge</h2>
+    <p style="text-align:center; max-width:700px; margin:auto;">
+      Votre style, notre passion. Coupez, rasez et soignez-vous dans une ambiance moderne et luxueuse. Découvrez nos services premium à Casablanca.
+    </p>
+  </section>
+
+  <section id="services">
+    <h2>Nos Services</h2>
+    <div class="services">
+      <div class="service"><h3>Coupe de cheveux simple</h3><p>Coupe standard (fade léger, tondeuse/lame), propre et rapide.</p></div>
+      <div class="service"><h3>Taille de barbe (grooming)</h3><p>Taille et redessinage basique barbe.</p></div>
+      <div class="service"><h3>Coupe + barbe (forfait)</h3><p>Forfait combiné souvent moins cher que séparément.</p></div>
+      <div class="service"><h3>Rasage contours simples</h3><p>Nettoyage contours barbe/nuque.</p></div>
+      <div class="service"><h3>Rasage à l’ancienne (coupe chou)</h3><p>Rasage traditionnel avec serviette chaude.</p></div>
+      <div class="service"><h3>Shampoing / brushing simple</h3><p>Parfois inclus ou en option.</p></div>
+    </div>
+  </section>
+
+  <section id="tarifs">
+    <h2>Tarifs</h2>
+    <div class="pricing">
+      <div class="price"><h3>Coupe de cheveux simple</h3><p>~50 DH</p></div>
+      <div class="price"><h3>Taille de barbe (grooming)</h3><p>~25 DH</p></div>
+      <div class="price"><h3>Coupe + barbe (forfait)</h3><p>~65–80 DH</p></div>
+      <div class="price"><h3>Rasage contours simples</h3><p>~10–20 DH</p></div>
+      <div class="price"><h3>Rasage à l’ancienne</h3><p>~30–50 DH</p></div>
+      <div class="price"><h3>Shampoing / brushing simple</h3><p>~15–30 DH</p></div>
+    </div>
+  </section>
+
+  <section id="rdv">
+    <h2>Prendre un Rendez-vous</h2>
+    <form class="contact-form" 
+          action="https://api.whatsapp.com/send?phone=212600000000&text=Bonjour,%20je%20veux%20réserver%20un%20service" 
+          method="get" target="_blank">
+      <input type="text" name="nom" placeholder="Votre nom" required>
+      <input type="tel" name="telephone" placeholder="Numéro WhatsApp" required>
+      <select name="service" required>
+        <option value="" disabled selected>Choisir un service</option>
+        <option value="Coupe de cheveux simple">Coupe de cheveux simple</option>
+        <option value="Taille de barbe (grooming)">Taille de barbe (grooming)</option>
+        <option value="Coupe + barbe (forfait)">Coupe + barbe (forfait)</option>
+        <option value="Rasage contours simples">Rasage contours simples</option>
+        <option value="Rasage à l’ancienne (coupe chou)">Rasage à l’ancienne</option>
+        <option value="Shampoing / brushing simple">Shampoing / brushing simple</option>
+      </select>
+      <input type="date" name="date" required>
+      <input type="time" name="heure" required>
+      <textarea name="message" rows="4" placeholder="Message (optionnel)"></textarea>
+      <button type="submit">Envoyer le RDV</button>
+    </form>
+    <p style="text-align:center; margin-top:10px;">⚠️ Votre réservation sera envoyée directement sur WhatsApp.</p>
+  </section>
+
+  <section id="contact">
+    <h2>Contact</h2>
+    <p style="text-align:center;">
+      📍 Adresse: Casablanca, Maroc<br>
+      📞 WhatsApp: +375(25)6230705<br>
+      📧 Email: redstarbarber@gmail.com
+    </p>
+  </section>
+
+  <footer>
+    <p>&copy; 2026 RedStarBarber.com - The Mansoury Lounge. Tous droits réservés.</p>
+  </footer>
+
+  <a class="whatsapp-btn" href="https://api.whatsapp.com/send?phone=212600000000" target="_blank">💬</a>
+
+</body>
+</html>
+
