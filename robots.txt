@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://haitammansoury7-bot.github.io/RedStarBarber/sitemap.xml
